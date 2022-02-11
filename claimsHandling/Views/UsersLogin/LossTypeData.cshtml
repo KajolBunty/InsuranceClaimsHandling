@@ -1,0 +1,64 @@
+﻿@model IEnumerable<claimsHandling.Models.LossType>
+
+@{
+    ViewData["Title"] = "LossTypeData";
+}
+
+<h1>LossTypeData</h1>
+ <input type="button" value="Go back!" onclick="history.back()">
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LossTypeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LossTypeDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Active)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastUpdatedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastUpdatedId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LossTypeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LossTypeDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Active)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastUpdatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastUpdatedId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedId)
+            </td>
+           
+        </tr>
+}
+    </tbody>
+</table>
